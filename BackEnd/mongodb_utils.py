@@ -6,7 +6,9 @@ from typing import Dict
 
 class MongoDB:
     def __init__(self):
-        MONGO_URI = os.getenv("MONGODB_URI", "mongodb+srv://Hamdanxd0:<db_password>@userconversations.h55uv.mongodb.net/?retryWrites=true&w=majority&appName=UserConversations")
+        MONGO_URI = os.getenv("MONGODB_URI")
+        if not MONGO_URI:
+            raise ValueError("MONGODB_URI environment variable is not set")
         
         # Initialize MongoDB client
         self.client = MongoClient(MONGO_URI)
