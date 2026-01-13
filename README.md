@@ -400,4 +400,4 @@ Solo developer and creator of InterviewAI.
 
 ---
 
-**Note:** Make sure to never commit your `.env` files or expose your API keys. Always use environment variables for sensitive configuration.
+
