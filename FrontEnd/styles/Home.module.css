@@ -1,0 +1,243 @@
+/* Remove the body selector and keep the component-specific styles */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #fbfafa;
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.stickyHeader {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    max-width: 100vw;
+    background-color: #fbfafa;
+    z-index: 1000;
+    box-shadow: none;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Adjusted padding for better alignment */
+}
+
+/* Logo Styling */
+.logo {
+    margin-right: 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-decoration: none;
+}
+
+.highlightO {
+    color: #7575eb; /* Matches the blue highlight */
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 90px; /* Larger space between Home, Services, Contact */
+    margin-left: 90px; /* Shift links to the left */
+    padding: 0;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+    .navLink:hover {
+        color: #7575eb; /* Matches the blue highlight */
+    }
+
+/* Navigation Buttons */
+.navButtons {
+    display: flex;
+    gap: 15px; /* Space between buttons and greeting */
+    margin-left: auto; /* Push buttons to the far right */
+    margin-right: 30px; /* Add more spacing on the right */
+    align-items: center; /* Align buttons with text */
+}
+
+/* User Greeting */
+.userGreeting {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Login Button */
+.loginButton {
+    padding: 12px 12px;
+    color: #333;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+    .loginButton:hover {
+        color: #7575eb; /* Matches the blue highlight */
+    }
+
+/* Sign Out Button */
+.signOutButton {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #7575eb;
+    border: 1px solid #7575eb;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .signOutButton:hover {
+        background-color: #7575eb;
+        color: white;
+    }
+
+/* Get Started Button Styling */
+.getStartedButton {
+    padding: 10px 20px; /* Increase padding for a larger button */
+    background-color: transparent;
+    color: #7575eb;
+    border: 1px solid #7575eb;
+    font-weight: 500;
+    font-size: 1rem; /* Keep the font size consistent */
+    border-radius: 30px; /* Adjust for a rounded look */
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+    .getStartedButton:hover {
+        background-color: #7575eb;
+        color: white;
+    }
+
+/* Header Text */
+.headerText {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    color: #333;
+    margin: 2px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.highlightText {
+    color: #7575eb;
+}
+
+/* Increased spacing below the last header line */
+.headerText:last-of-type {
+    margin-bottom: 25px; /* Adjusted margin to create space between main header and subtext */
+}
+
+/* Sub-header */
+.subHeader {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #898585;
+    margin: 2px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Try Button */
+.tryButton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #7575eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.tryButton:hover {
+    background-color: #6060f1;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #fbfafa;
+    color: #898585;
+    padding: 15px 25px;
+    width: fit-content;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.footerContent {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;  /* Prevent text wrapping */
+}
+
+.footerLogo {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.footerText {
+    font-size: 1rem;
+    color: #898585;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 4px;
+}
+
+.copyright {
+    font-size: 0.6rem;
+    color: #898585;
+    margin-left: 2px; /* Bring closer to Dellio */
+    position: relative;
+    top: -2px; /* Slightly higher */
+}
+
+/* Adjust main content wrapper */
+.dmContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-bottom: 80px; /* Add space for footer */
+}
+
+/* Remove media queries for headerText and subHeader sizes */
+@media (min-width: 768px), (max-width: 767px) {
+    .headerText, .subHeader {
+        /* Remove fixed font sizes */
+    }
+}

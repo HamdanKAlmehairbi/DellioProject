@@ -1,0 +1,30 @@
+.waitingRoom {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #f8f9ff, #f0f2ff);
+    padding: 2rem;
+}
+
+.status {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.queueInfo {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0f0;
+}
+
+.estimatedTime {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+} 

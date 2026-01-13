@@ -1,0 +1,82 @@
+.container {
+    height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #f8f9ff, #f0f2ff);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.termsBox {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.effectiveDate {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.sectionTitle {
+    color: #444;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.termsList {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.termsList li {
+    margin-bottom: 0.5rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.contactSection {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.backLink {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #7575eb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.backLink:hover {
+    color: #5555c7;
+}
+
+.text {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}

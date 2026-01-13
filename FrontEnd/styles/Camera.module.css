@@ -1,0 +1,43 @@
+.videoContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #f8f9ff;
+    border-radius: 12px;
+}
+
+.video.loading {
+    opacity: 0;
+}
+
+.loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9ff;
+}
+
+.loadingSpinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #7575eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} 

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset default behaviors */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%; /* Full height */
+    width: 100%;
+    position: fixed; /* Prevent mobile bounce effect */
+}
+
+/* Keep your existing styles but modify the body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color_1, #333);
+    background-color: #fbfafa;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* Paragraph and List styles */
+p, li {
+    font-weight: 400;
+    color: var(--color_1, #333);
+}
+
+/* Anchor styles */
+a {
+    color: var(--color_4, #7575eb); /* Default to match the primary theme */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    a:hover {
+        color: #6060f1; /* Hover state for links */
+    }
+
+/* Responsive font sizes */
+@media (min-width: 1025px) {
+    h1 { font-size: 50px; }
+    h2 { font-size: 32px; }
+    h3 { font-size: 25px; }
+    h4 { font-size: 20px; }
+    h5 { font-size: 15px; }
+    h6 { font-size: 14px; }
+    p, li { font-size: 18px; }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 { font-size: 50px; }
+    h2 { font-size: 30px; }
+    h3 { font-size: 25px; }
+    h4 { font-size: 20px; }
+    h5 { font-size: 15px; }
+    h6, p, li { font-size: 16px; }
+}
+
+@media (max-width: 767px) {
+    h1 { font-size: 40px; }
+    h2 { font-size: 30px; }
+    h3 { font-size: 20px; }
+    h4 { font-size: 18px; }
+    h5 { font-size: 15px; }
+    h6, p, li { font-size: 16px; }
+}
+
+/* Button styling */
+.tryButton {
+    background-color: #7575eb;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.tryButton:hover {
+    background-color: #6060f1;
+}
+
+/* Add these to your existing globals.css */
+html {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}

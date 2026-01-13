@@ -1,0 +1,540 @@
+/* Common Variables */
+.container {
+    --primary-color: #0084ff;
+    --bg-dark: #1a1a1a;
+    --bg-darker: #2a2a2a;
+    --text-light: #ffffff;
+    --border-radius-lg: 16px;
+    --border-radius-sm: 12px;
+    --transition-default: all 0.3s ease-in-out;
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --shadow-default: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: var(--bg-dark);
+}
+
+/* MAIN CONTENT AREA (LEFT SIDE) */
+.mainContent {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 40px;
+    position: relative;
+}
+
+/* MAIN CAMERA */
+.cameraContainer {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    background: var(--bg-darker);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: var(--shadow-default);
+    border: 3px solid transparent;
+    transition: var(--transition-default);
+}
+
+.camera {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* INTERVIEWER BOX */
+.interviewerBox {
+    position: absolute;
+    bottom: 40px;
+    right: 460px;
+    width: 160px;
+    height: 160px;
+    background: var(--bg-darker);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    border: 3px solid transparent;
+    z-index: 1;
+    box-shadow: var(--shadow-default);
+    transition: var(--transition-default);
+}
+
+.interviewerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.interviewerOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--text-light);
+    font-size: 14px;
+    font-family: var(--font-family);
+}
+
+/* CHAT INTERFACE (RIGHT SIDE) */
+.interviewContainer {
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+/* CHAT HEADER */
+.header {
+    flex-shrink: 0;
+    padding: 20px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CHAT MESSAGES AREA */
+.chatBox {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.messagesWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Hide scrollbar for Chrome/Safari/Opera */
+.chatBox::-webkit-scrollbar {
+    display: none;
+}
+
+/* MESSAGE STYLES */
+.message {
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 12px;
+    max-width: 85%;
+    line-height: 1.5;
+    font-size: 14px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.interviewer {
+    background: #f0f2ff;
+    color: #2d3748;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+
+.user {
+    background: #7575eb;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+/* Add subtle shadow and hover effect */
+.message {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.message:hover {
+    transform: translateY(-1px);
+}
+
+/* Add message indicators */
+.interviewer::before {
+    content: 'Noah';
+    position: absolute;
+    top: -18px;
+    left: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.user::before {
+    content: 'You';
+    position: absolute;
+    top: -18px;
+    right: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+/* INPUT AREA */
+.inputContainer {
+    flex-shrink: 0;
+    height: 80px;
+    padding: 20px;
+    background: white;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+.inputField {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #0084ff;
+    background: white;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Error message styling */
+.errorMessage {
+    color: #d32f2f;
+    text-align: center;
+    padding: 2rem;
+}
+
+    .errorMessage h1 {
+        font-size: 2rem;
+        color: #d9534f;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .errorMessage p {
+        font-size: 1rem;
+        color: #d9534f;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.4;
+    }
+
+.userInfo {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.name {
+    font-size: 14px;
+}
+
+.status {
+    opacity: 0.7;
+}
+
+/* ACTIVE SPEAKER STYLES */
+.activeSpeaker {
+    border: 3px solid #0084ff !important;
+    box-shadow: 0 0 15px rgba(0, 132, 255, 0.3);
+    animation: pulseBorder 2s infinite ease-in-out;
+}
+
+@keyframes pulseBorder {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(0, 132, 255, 0.3);
+        border-color: rgba(0, 132, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 132, 255, 0.5);
+        border-color: rgba(0, 132, 255, 1);
+    }
+}
+
+.recordingStatus {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: #2C3E50;
+    animation: fadeIn 0.2s ease;
+}
+
+.recordingPopup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.debugPanel {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 400px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logs div {
+    font-family: monospace;
+    font-size: 0.8em;
+    padding: 3px 0;
+}
+
+.success { color: #2ecc71; }
+.warning { color: #f1c40f; }
+.error { color: #e74c3c; }
+.info { color: #3498db; }
+.debug { color: #95a5a6; }
+
+/* Loading State */
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-light);
+    font-family: var(--font-family);
+    text-align: center;
+    z-index: 1000;
+}
+
+.loading:after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 3px solid var(--text-light);
+    border-color: var(--text-light) transparent var(--text-light) transparent;
+    animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+    to { transform: rotate(360deg); }
+}
+
+/* Welcome Message */
+.welcome {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Enhanced Message Styles */
+.message.interviewer {
+    background: #2C3E50;  /* Dark blue-gray for AI messages */
+    color: #FFFFFF;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+
+.message.user {
+    background: #0084ff;  /* Bright blue for user messages */
+    color: #FFFFFF;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.message.system {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffd700;
+    text-align: center;
+    margin: 16px auto;
+    font-style: italic;
+}
+
+/* Connection Status */
+.connectionStatus {
+    position: absolute;
+    top: 20px;
+    right: 420px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.connectionStatus.connected {
+    background: rgba(46, 213, 115, 0.2);
+    color: #2ed573;
+}
+
+.connectionStatus.disconnected {
+    background: rgba(255, 71, 87, 0.2);
+    color: #ff4757;
+}
+
+.connectionStatus.connecting {
+    background: rgba(255, 165, 2, 0.2);
+    color: #ffa502;
+}
+
+/* Enhanced Error State */
+.error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 71, 87, 0.1);
+    color: #ff4757;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    animation: fadeIn 0.3s ease-in-out;
+    max-width: 80%;
+}
+
+.error h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.error p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Audio Playing Indicator */
+.audioPlaying {
+    position: relative;
+    padding-left: 24px;
+}
+
+.audioPlaying:before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #0084ff;
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: translateY(-50%) scale(1); opacity: 1; }
+    50% { transform: translateY(-50%) scale(1.5); opacity: 0.5; }
+    100% { transform: translateY(-50%) scale(1); opacity: 1; }
+}
+
+.noVideoPlaceholder {
+    width: 100%;
+    height: 100%;
+    background: #4a5568;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.userInitial {
+    width: 80px;
+    height: 80px;
+    background: #2d3748;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.participantBox {
+    display: none;
+}
+
+.activeSpeaker {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.keyHint {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.keySymbol {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin: 0 5px;
+    font-family: monospace;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, 20px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
