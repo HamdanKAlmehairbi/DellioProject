@@ -1,12 +1,12 @@
-# InterviewAI 🎤
+# Dellio 🎤
 
 An AI-powered interview practice platform that helps users improve their interview skills through realistic, AI-conducted mock interviews. Built with Next.js, FastAPI, and OpenAI's GPT-4.
 
 ## 🎥 Demo
 
-Watch the demo video to see InterviewAI in action:
+Watch the demo video to see Dellio in action:
 
-[![InterviewAI Demo](https://img.youtube.com/vi/pjY6ScbvhGU/0.jpg)](https://www.youtube.com/watch?v=pjY6ScbvhGU)
+[![Dellio Demo](https://img.youtube.com/vi/pjY6ScbvhGU/0.jpg)](https://www.youtube.com/watch?v=pjY6ScbvhGU)
 
 **Direct Link:** https://www.youtube.com/watch?v=pjY6ScbvhGU
 
@@ -387,7 +387,7 @@ This project is private and proprietary.
 
 **Hamdan Almehairbi**
 
-Solo developer and creator of InterviewAI.
+Solo developer and creator of Dellio.
 
 ---
 
