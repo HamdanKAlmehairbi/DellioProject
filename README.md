@@ -2,7 +2,7 @@
 
 An AI-powered interview practice platform that helps users improve their interview skills through realistic, AI-conducted mock interviews. Built with Next.js, FastAPI, and OpenAI's GPT-4.
 
-## 🎥 Demo
+##  Demo
 
 Watch the demo video to see Dellio in action:
 
@@ -10,7 +10,7 @@ Watch the demo video to see Dellio in action:
 
 **Direct Link:** https://www.youtube.com/watch?v=pjY6ScbvhGU
 
-## ✨ Features
+##  Features
 
 - **AI-Powered Interviews**: Conduct realistic mock interviews using GPT-4
 - **Real-time Conversation**: WebSocket-based real-time audio conversation with the AI interviewer
@@ -21,7 +21,7 @@ Watch the demo video to see Dellio in action:
 - **Session Management**: JWT-based authentication with refresh tokens
 - **Conversation History**: Store and retrieve interview conversations
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **Next.js 18** - React framework
@@ -44,7 +44,7 @@ Watch the demo video to see Dellio in action:
 - **Docker** - Containerization
 - **Docker Compose** - Multi-container orchestration
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -62,7 +62,7 @@ Before you begin, ensure you have the following installed:
 - **Deepseek API Key** (optional) - Alternative AI model
 - **Google OAuth Credentials** - For Google Sign-In
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the Repository
 
@@ -265,7 +265,7 @@ Frontend will be available at: `http://localhost:3000`
 3. Upload your resume and job description
 4. Start your AI-powered interview!
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 InterviewAI-main/
@@ -287,7 +287,7 @@ InterviewAI-main/
 └── README.md              # This file
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### Backend Configuration
 
@@ -301,7 +301,7 @@ InterviewAI-main/
 - **API Endpoint**: Configured via `NEXT_PUBLIC_BACKEND_URL`
 - **WebSocket Endpoint**: Configured via `NEXT_PUBLIC_WS_URL`
 
-## 🧪 Testing
+##  Testing
 
 ### Backend API Testing
 
@@ -313,7 +313,7 @@ Visit `http://localhost:8000/docs` for interactive API documentation (Swagger UI
 curl http://localhost:8000/health
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Backend Issues
 
@@ -350,7 +350,7 @@ curl http://localhost:8000/health
    - Verify `NEXT_PUBLIC_WS_URL` is correct
    - Check backend WebSocket endpoint is accessible
 
-## 📝 API Endpoints
+##  API Endpoints
 
 ### Authentication
 - `POST /generate-token` - Generate JWT tokens
@@ -371,7 +371,7 @@ curl http://localhost:8000/health
 ### WebSocket
 - `WS /ws/interview?token={token}&user_id={user_id}&new_session={bool}` - Interview WebSocket connection
 
-## 🔒 Security
+##  Security
 
 - All API keys and secrets are stored in environment variables (never commit `.env` files)
 - JWT tokens with refresh token support
@@ -379,11 +379,11 @@ curl http://localhost:8000/health
 - Environment variables validated on startup
 - No hardcoded credentials in source code
 
-## 📄 License
+##  License
 
 This project is private and proprietary.
 
-## 👤 Author
+##  Author
 
 **Hamdan Almehairbi**
 
@@ -391,7 +391,7 @@ Solo developer and creator of Dellio.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - OpenAI for GPT-4 and Whisper APIs
 - Anthropic for Claude API
