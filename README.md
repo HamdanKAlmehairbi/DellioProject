@@ -1,4 +1,4 @@
-# Dellio 🎤
+# Dellio 
 
 An AI-powered interview practice platform that helps users improve their interview skills through realistic, AI-conducted mock interviews. Built with Next.js, FastAPI, and OpenAI's GPT-4.
 
